@@ -14,6 +14,8 @@ jobs:
   build-package:
     # choose the oldest one to get the oldest GLIBC
     runs-on: ubuntu-22.04
+    container:
+      image: quay.io/pypa/manylinux2014_x86_64
     steps:
       - name: Checkout this repository
         uses: actions/checkout@v4
